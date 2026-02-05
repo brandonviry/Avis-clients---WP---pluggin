@@ -1,0 +1,219 @@
+═══════════════════════════════════════════════════════════════
+   SITE AVIS CLIENTS - Structure complète du plugin
+
+   Auteur: VIRY Brandon
+   Site: https://devweb.viry-brandon.fr
+   GitHub: https://github.com/brandonviry/Avis-clients---WP---pluggin
+═══════════════════════════════════════════════════════════════
+
+site-avis-clients/
+│
+├── 📄 site-avis-clients.php          ⭐ FICHIER PRINCIPAL
+├── 📄 uninstall.php                  Script de désinstallation
+├── 📄 .gitignore                     Configuration Git
+│
+├── 📁 includes/                      CLASSES PHP
+│   ├── 📄 class-sac-review-handler.php    Gestion des avis
+│   ├── 📄 class-sac-validator.php         Validation et sécurité
+│   └── 📄 class-sac-shortcodes.php        Shortcodes WordPress
+│
+├── 📁 templates/                     TEMPLATES D'AFFICHAGE
+│   ├── 📄 review-form.php                 Formulaire de soumission
+│   └── 📄 review-display.php              Affichage des avis (exemple)
+│
+├── 📁 assets/                        RESSOURCES FRONT-END
+│   ├── 📁 css/
+│   │   ├── 📄 front.css                   Styles front-end
+│   │   └── 📄 admin.css                   Styles administration
+│   └── 📁 js/
+│       └── 📄 front.js                    JavaScript front-end (AJAX)
+│
+├── 📁 languages/                     TRADUCTIONS
+│   └── 📄 site-avis-clients-fr_FR.po      Traduction française
+│
+└── 📁 Documentation/                 GUIDES ET DOCS
+    ├── 📄 README.md                       Documentation développeur
+    ├── 📄 readme.txt                      Documentation WordPress.org
+    ├── 📄 INSTALLATION.md                 Guide d'installation
+    ├── 📄 QUICKSTART.md                   Démarrage rapide (5 min)
+    ├── 📄 EXAMPLES.md                     Exemples de code
+    ├── 📄 STRUCTURE.md                    Architecture du plugin
+    └── 📄 SUMMARY.md                      Résumé complet
+
+═══════════════════════════════════════════════════════════════
+   STATISTIQUES
+═══════════════════════════════════════════════════════════════
+
+📊 TOTAL : 18 fichiers créés
+
+📝 CODE SOURCE :
+   • 4 fichiers PHP principaux
+   • 3 classes PHP
+   • 2 templates PHP
+   • 2 fichiers CSS
+   • 1 fichier JavaScript
+
+📚 DOCUMENTATION :
+   • 7 fichiers de documentation
+   • 1 fichier de traduction
+
+═══════════════════════════════════════════════════════════════
+   TAILLE APPROXIMATIVE
+═══════════════════════════════════════════════════════════════
+
+site-avis-clients.php          ~13 KB
+class-sac-review-handler.php   ~7 KB
+class-sac-validator.php        ~5 KB
+class-sac-shortcodes.php       ~5 KB
+review-form.php                ~2 KB
+review-display.php             ~6 KB
+front.css                      ~4 KB
+admin.css                      ~2 KB
+front.js                       ~5 KB
+
+TOTAL CODE : ~49 KB
+DOCUMENTATION : ~55 KB
+
+═══════════════════════════════════════════════════════════════
+   FONCTIONNALITÉS PAR FICHIER
+═══════════════════════════════════════════════════════════════
+
+site-avis-clients.php
+  • Déclaration du plugin
+  • Classe principale singleton
+  • Enregistrement du CPT "review"
+  • Meta boxes administration
+  • Hooks et actions WordPress
+  • Colonnes personnalisées
+
+class-sac-review-handler.php
+  • Traitement des soumissions
+  • Création des posts review
+  • Statistiques (moyenne, total, distribution)
+  • Notifications email
+  • Rate limiting
+  • Méthodes de récupération
+
+class-sac-validator.php
+  • Validation des données
+  • Détection de spam
+  • Rate limiting IP/email
+  • Sanitization
+  • Vérifications de sécurité
+
+class-sac-shortcodes.php
+  • [avis_clients_form]
+  • [avis_clients_list]
+  • [avis_clients_stats]
+
+review-form.php
+  • Template du formulaire
+  • Champs de saisie
+  • Système de notation étoiles
+  • Messages de validation
+
+review-display.php
+  • Affichage des avis
+  • Statistiques résumées
+  • Distribution des notes
+  • Pagination
+  • Filtres
+
+front.css
+  • Styles du formulaire
+  • Design des étoiles
+  • Messages de validation
+  • Responsive design
+  • Animations
+
+admin.css
+  • Styles meta boxes
+  • Colonnes personnalisées
+  • Dashboard widgets
+
+front.js
+  • Interaction étoiles
+  • Soumission AJAX
+  • Validation client
+  • Gestion des erreurs
+  • Compteur de caractères
+
+═══════════════════════════════════════════════════════════════
+   SHORTCODES DISPONIBLES
+═══════════════════════════════════════════════════════════════
+
+[avis_clients_form]
+  → Affiche le formulaire de soumission
+
+[avis_clients_list limit="10" rating="5"]
+  → Affiche la liste des avis
+
+[avis_clients_stats show_distribution="yes"]
+  → Affiche les statistiques
+
+═══════════════════════════════════════════════════════════════
+   HOOKS PERSONNALISÉS
+═══════════════════════════════════════════════════════════════
+
+ACTIONS :
+  • sac_review_submitted
+  • sac_before_review_insert
+  • sac_after_review_insert
+
+FILTRES :
+  • sac_review_default_status
+  • sac_spam_keywords
+  • sac_ip_rate_limit_duration
+  • sac_email_rate_limit_duration
+
+═══════════════════════════════════════════════════════════════
+   SÉCURITÉ
+═══════════════════════════════════════════════════════════════
+
+✅ Nonces (CSRF protection)
+✅ Validation serveur complète
+✅ Sanitization (sanitize_text_field, sanitize_email, wp_kses_post)
+✅ Échappement (esc_html, esc_attr, esc_url)
+✅ Capabilities check (current_user_can)
+✅ Rate limiting (IP + email)
+✅ Détection spam
+✅ Protection ABSPATH
+✅ Requêtes préparées
+
+═══════════════════════════════════════════════════════════════
+   COMPATIBILITÉ
+═══════════════════════════════════════════════════════════════
+
+WordPress : 5.8+
+PHP       : 7.4+
+MySQL     : 5.6+
+
+✅ Tous thèmes WordPress
+✅ Page builders (Elementor, Divi, etc.)
+✅ Plugins de cache
+✅ Plugins de sécurité
+✅ Multisite compatible
+
+═══════════════════════════════════════════════════════════════
+   INSTALLATION RAPIDE
+═══════════════════════════════════════════════════════════════
+
+1. Copier le dossier dans /wp-content/plugins/
+2. Activer dans Extensions > Extensions installées
+3. Créer une page avec [avis_clients_form]
+4. Tester la soumission
+
+✅ PRÊT EN 5 MINUTES !
+
+═══════════════════════════════════════════════════════════════
+   DOCUMENTATION À CONSULTER
+═══════════════════════════════════════════════════════════════
+
+Débutants      → QUICKSTART.md
+Utilisateurs   → INSTALLATION.md
+Développeurs   → README.md + EXAMPLES.md + STRUCTURE.md
+Résumé complet → SUMMARY.md
+
+═══════════════════════════════════════════════════════════════
+   Version : 1.0.0  |  Date : 2026-02-05  |  Statut : ✅ Ready
+═══════════════════════════════════════════════════════════════

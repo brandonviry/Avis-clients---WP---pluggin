@@ -1,0 +1,250 @@
+/**
+ * Front-end styles for review form
+ */
+
+/* Form wrapper */
+.sac-review-form-wrapper {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sac-form-title {
+    margin: 0 0 1.5rem;
+    font-size: 1.75rem;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Form groups */
+.sac-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.sac-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.sac-label .required {
+    color: #e74c3c;
+    margin-left: 2px;
+}
+
+/* Input fields */
+.sac-input,
+.sac-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.sac-input:focus,
+.sac-textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.sac-input.error,
+.sac-textarea.error {
+    border-color: #e74c3c;
+}
+
+.sac-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Rating input */
+.sac-rating-input {
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.sac-stars {
+    display: inline-flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sac-star {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.sac-star.hover,
+.sac-star.selected {
+    color: #ffa500;
+    transform: scale(1.1);
+}
+
+.sac-star:hover {
+    transform: scale(1.2);
+}
+
+.sac-rating-text {
+    display: block;
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+    min-height: 1.5rem;
+}
+
+/* Help text */
+.sac-help-text {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.sac-char-counter {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.sac-char-counter.warning {
+    color: #e67e22;
+    font-weight: 500;
+}
+
+/* Validation error */
+.sac-validation-error {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: #e74c3c;
+}
+
+/* Submit button */
+.sac-submit-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.sac-submit-button:hover {
+    background: #2980b9;
+}
+
+.sac-submit-button:active {
+    transform: translateY(1px);
+}
+
+.sac-submit-button:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Privacy notice */
+.sac-privacy-notice {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Messages */
+.sac-form-messages {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    display: none;
+}
+
+.sac-form-messages.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.sac-form-messages.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+.sac-form-messages p {
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sac-review-form-wrapper {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .sac-form-title {
+        font-size: 1.5rem;
+    }
+
+    .sac-star {
+        font-size: 1.75rem;
+    }
+
+    .sac-stars {
+        gap: 0.25rem;
+    }
+}
+
+/* Accessibility */
+.sac-input:focus-visible,
+.sac-textarea:focus-visible,
+.sac-submit-button:focus-visible {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+.sac-star:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Animation for loader */
+@keyframes sac-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.sac-button-loader::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: sac-spin 0.8s linear infinite;
+}

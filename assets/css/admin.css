@@ -1,0 +1,107 @@
+/**
+ * Admin styles for review post type
+ */
+
+/* Review rating display in post list */
+.column-rating {
+    width: 100px;
+}
+
+/* Rating meta box */
+#sac_review_rating .inside {
+    padding: 12px;
+}
+
+#sac_review_rating select {
+    font-size: 14px;
+    padding: 5px;
+}
+
+/* Info meta box */
+#sac_review_info .inside {
+    padding: 12px;
+}
+
+#sac_review_info p {
+    margin: 0 0 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+#sac_review_info p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+#sac_review_info strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #1d2327;
+}
+
+/* Dashboard widget styles (for future use) */
+.sac-dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.sac-stat-box {
+    padding: 15px;
+    background: #f6f7f7;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.sac-stat-number {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2271b1;
+    line-height: 1.2;
+}
+
+.sac-stat-label {
+    font-size: 0.9rem;
+    color: #646970;
+    margin-top: 5px;
+}
+
+.sac-rating-bars {
+    margin-top: 20px;
+}
+
+.sac-rating-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sac-rating-bar-label {
+    width: 40px;
+    font-size: 0.9rem;
+    color: #646970;
+}
+
+.sac-rating-bar-graph {
+    flex: 1;
+    height: 20px;
+    background: #f0f0f1;
+    border-radius: 3px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.sac-rating-bar-fill {
+    height: 100%;
+    background: #2271b1;
+    transition: width 0.3s ease;
+}
+
+.sac-rating-bar-count {
+    width: 40px;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #646970;
+}

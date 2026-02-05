@@ -1,0 +1,82 @@
+# Translation file for Site Avis Clients
+msgid ""
+msgstr ""
+"Project-Id-Version: Site Avis Clients 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-05 10:00+0000\n"
+"PO-Revision-Date: 2026-02-05 10:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Français\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# Post Type Labels
+msgid "Avis"
+msgstr "Avis"
+
+msgid "Avis Clients"
+msgstr "Avis Clients"
+
+msgid "All Reviews"
+msgstr "Tous les avis"
+
+msgid "Add New Review"
+msgstr "Ajouter un nouvel avis"
+
+msgid "Edit Review"
+msgstr "Modifier l'avis"
+
+# Form Labels
+msgid "Votre nom"
+msgstr "Votre nom"
+
+msgid "Votre email"
+msgstr "Votre email"
+
+msgid "Titre de votre avis"
+msgstr "Titre de votre avis"
+
+msgid "Votre note"
+msgstr "Votre note"
+
+msgid "Votre avis"
+msgstr "Votre avis"
+
+msgid "Envoyer mon avis"
+msgstr "Envoyer mon avis"
+
+# Validation Messages
+msgid "Le titre est requis."
+msgstr "Le titre est requis."
+
+msgid "Le contenu est requis."
+msgstr "Le contenu est requis."
+
+msgid "La note est requise."
+msgstr "La note est requise."
+
+msgid "Le nom est requis."
+msgstr "Le nom est requis."
+
+msgid "L'email est requis."
+msgstr "L'email est requis."
+
+msgid "L'adresse email n'est pas valide."
+msgstr "L'adresse email n'est pas valide."
+
+# Success/Error Messages
+msgid "Merci ! Votre avis a été soumis avec succès."
+msgstr "Merci ! Votre avis a été soumis avec succès."
+
+msgid "Une erreur est survenue"
+msgstr "Une erreur est survenue"
+
+msgid "Ce champ est requis"
+msgstr "Ce champ est requis"
+
+# Email Notification
+msgid "[%s] Nouvel avis en attente de modération"
+msgstr "[%s] Nouvel avis en attente de modération"
